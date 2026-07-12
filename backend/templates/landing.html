@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PrahariAI — Digital Public Safety Intelligence</title>
+<link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-mark">PRAHARI<span style="color:var(--amber)">AI</span></div>
+  <div class="nav-links">
+    <a href="/citizen-shield">Citizen Shield</a>
+    <a href="/scam-detector">Scam Detector</a>
+    <a href="/counterfeit-scanner">Note Scanner</a>
+    <a href="/complaint-assist">Complaint Assist</a>
+    <a href="/awareness">Scam Watch</a>
+    <a href="/dashboard">Command Center</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <span class="eyebrow">ET AI HACKATHON 2026 · DIGITAL PUBLIC SAFETY</span>
+    <h1 class="hero-title">Fraud moves in seconds.<br><em>Prahari</em> moves before it does.</h1>
+    <p class="hero-sub">
+      A single intelligence layer that listens for digital-arrest scam patterns as a call happens,
+      verifies currency at the point of contact, and maps fraud rings before the next victim picks up the phone.
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="/scam-detector">Run the scam detector</a>
+      <a class="btn btn-ghost" href="/dashboard">Open command center</a>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>₹1,776 CRORE LOST TO DIGITAL ARREST SCAMS, JAN–SEP 2024</span>
+    <span class="hot">1.14M CYBERCRIME COMPLAINTS FILED IN 2023</span>
+    <span>RECORD FICN SEIZURES FLAGGED IN RBI FY2025 REPORT</span>
+    <span class="hot">60% YEAR-ON-YEAR RISE IN REPORTED FRAUD</span>
+    <span>DIAL 1930 — NATIONAL CYBER FRAUD HELPLINE</span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">The platform</span>
+    <h2 class="section-title">Five instruments. One command layer.</h2>
+  </div>
+  <div class="feature-grid">
+    <div class="feature-card reveal">
+      <div class="fc-index">01</div>
+      <h3>Digital Arrest Scam Detector</h3>
+      <p>Scores a live call transcript against known impersonation, isolation, and urgency markers — in real time, before money moves.</p>
+      <a class="fc-link" href="/scam-detector">Run detector →</a>
+    </div>
+    <div class="feature-card reveal">
+      <div class="fc-index">02</div>
+      <h3>Counterfeit Note Scanner</h3>
+      <p>Point a camera at a note. Vision AI checks security thread, latent image, and microprint against genuine RBI specifications.</p>
+      <a class="fc-link" href="/counterfeit-scanner">Scan a note →</a>
+    </div>
+    <div class="feature-card reveal">
+      <div class="fc-index">03</div>
+      <h3>Fraud Network Graph</h3>
+      <p>Clusters phone numbers, UPI IDs, devices, and mule accounts from victim reports into one traceable ring — not isolated complaints.</p>
+      <a class="fc-link" href="/dashboard">View graph →</a>
+    </div>
+    <div class="feature-card reveal">
+      <div class="fc-index">04</div>
+      <h3>Geospatial Crime Intelligence</h3>
+      <p>City-level hotspot mapping across fraud categories, so patrol and outreach resources go where the next wave is forming.</p>
+      <a class="fc-link" href="/dashboard">View map →</a>
+    </div>
+    <div class="feature-card reveal">
+      <div class="fc-index">05</div>
+      <h3>Citizen Fraud Shield</h3>
+      <p>Anyone can describe a suspicious call or message and get an instant, plain-language verdict — before they transfer a rupee.</p>
+      <a class="fc-link" href="/citizen-shield">Ask Prahari →</a>
+    </div>
+    <div class="feature-card reveal">
+      <div class="fc-index">06</div>
+      <h3>Voice Shield</h3>
+      <p>Upload a call recording. Real transcription, real scam-pattern scoring — an honest speech-AI layer, not a fake deepfake detector.</p>
+      <a class="fc-link" href="/voice-shield">Analyze a call →</a>
+    </div>
+    <div class="feature-card reveal">
+      <div class="fc-index">07</div>
+      <h3>Complaint Assist</h3>
+      <p>Drafts a properly formatted cybercrime complaint in seconds, ready to submit at the official portal — never claims to file it for you.</p>
+      <a class="fc-link" href="/complaint-assist">Start a draft →</a>
+    </div>
+    <div class="feature-card reveal">
+      <div class="fc-index">08</div>
+      <h3>Scam Watch</h3>
+      <p>Real, current fraud reporting from Indian and global outlets, summarized in plain language, one tap from the original story.</p>
+      <a class="fc-link" href="/awareness">Read the feed →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head reveal">
+    <span class="eyebrow">How a call gets stopped</span>
+    <h2 class="section-title">From ringing phone to closed case, in four stages.</h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-row reveal">
+      <div class="timeline-num">01</div>
+      <div class="timeline-rule"></div>
+      <div class="timeline-body">
+        <h4>Signal capture</h4>
+        <p>Call transcript or citizen-reported message enters the detection engine as plain text — no special hardware required.</p>
+      </div>
+    </div>
+    <div class="timeline-row reveal">
+      <div class="timeline-num">02</div>
+      <div class="timeline-rule"></div>
+      <div class="timeline-body">
+        <h4>Pattern match</h4>
+        <p>The engine checks for impersonation claims, forced isolation, urgency-to-transfer, and OTP requests — the fingerprint of a digital arrest scam.</p>
+      </div>
+    </div>
+    <div class="timeline-row reveal">
+      <div class="timeline-num">03</div>
+      <div class="timeline-rule"></div>
+      <div class="timeline-body">
+        <h4>Risk verdict</h4>
+        <p>A scored, explainable verdict is issued in seconds — safe, suspicious, or confirmed pattern — with the specific red flags named.</p>
+      </div>
+    </div>
+    <div class="timeline-row reveal">
+      <div class="timeline-num">04</div>
+      <div class="timeline-rule"></div>
+      <div class="timeline-body">
+        <h4>Network linkage</h4>
+        <p>Flagged numbers, UPI IDs, and devices are added to the fraud graph, connecting this case to others before the ring can move on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band reveal">
+  <span class="eyebrow">Built for ET AI Hackathon 2026</span>
+  <h2>See it flag a scam call<br>in front of you.</h2>
+  <a class="btn btn-primary" href="/scam-detector">Launch the live demo</a>
+</section>
+
+<footer class="foot">
+  <span>PRAHARIAI — DIGITAL PUBLIC SAFETY INTELLIGENCE PLATFORM</span>
+  <span>DEMO DATA IS SYNTHETIC · BUILT ON GROQ + FLASK</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+</body>
+</html>

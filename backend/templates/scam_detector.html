@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scam Detector — PrahariAI</title>
+<link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="app-nav">
+    <div class="app-mark"><a href="/">PRAHARI<span style="color:var(--amber)">AI</span></a></div>
+    <div class="app-links">
+      <a href="/dashboard">Command Center</a>
+      <a href="/scam-detector" class="active">Scam Detector</a>
+      <a href="/voice-shield">Voice Shield</a>
+      <a href="/counterfeit-scanner">Note Scanner</a>
+      <a href="/complaint-assist">Complaint Assist</a>
+      <a href="/awareness">Scam Watch</a>
+      <a href="/citizen-shield">Citizen Shield</a>
+    </div>
+  </nav>
+
+  <main class="app-main">
+    <div class="page-head">
+      <span class="eyebrow">Instrument 01</span>
+      <h1>Digital Arrest Scam Detector</h1>
+      <p>Paste a call transcript, or run the live simulated call to watch the engine flag a digital-arrest scam line by line, in real time.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <h2 class="panel-title">Live simulated call</h2>
+        <p class="panel-sub">Plays a scripted digital-arrest call transcript and scores it once fully delivered — the same pipeline used for real transcripts.</p>
+        <div id="live-transcript"></div>
+        <div class="btn-row">
+          <button class="btn-sm primary" id="run-demo-btn">Run simulated call</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2 class="panel-title">Analyze your own transcript</h2>
+        <p class="panel-sub">Paste any call or message transcript below.</p>
+        <textarea id="transcript-input" rows="10" placeholder="Paste transcript here..."></textarea>
+        <div class="btn-row">
+          <button class="btn-sm primary" id="analyze-btn">Analyze transcript</button>
+          <button class="btn-sm" id="clear-btn">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel verdict-box" id="verdict-box">
+      <span class="eyebrow" id="verdict-label">Verdict</span>
+      <div class="verdict-score" id="verdict-score">—</div>
+      <p id="verdict-reasoning" style="color:var(--paper-dim); margin-top:12px;"></p>
+      <ul class="flag-list" id="flag-list"></ul>
+    </div>
+
+    <div class="panel" id="agent-trace-panel" style="display:none">
+      <h2 class="panel-title">Agent trace</h2>
+      <p class="panel-sub">Detection Agent → Network Correlation Agent → Report Agent</p>
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-bottom:20px;">
+        <div class="mono" style="font-size:0.82rem; color:var(--paper-dim); border-left:2px solid var(--amber); padding-left:12px;">
+          <strong style="color:var(--paper)">01 Detection</strong><br>Scored transcript against scam markers
+        </div>
+        <div class="mono" style="font-size:0.82rem; color:var(--paper-dim); border-left:2px solid var(--amber); padding-left:12px;">
+          <strong style="color:var(--paper)">02 Correlation</strong><br><span id="matched-count">0</span> fraud-network match(es)
+        </div>
+        <div class="mono" style="font-size:0.82rem; color:var(--paper-dim); border-left:2px solid var(--amber); padding-left:12px;">
+          <strong style="color:var(--paper)">03 Report</strong><br>Preliminary summary drafted
+        </div>
+      </div>
+      <p id="agent-report-text" style="color:var(--paper); font-size:0.9rem; line-height:1.7;"></p>
+    </div>
+  </main>
+</div>
+
+<script src="{{ url_for('static', filename='js/scam_detector.js') }}"></script>
+</body>
+</html>

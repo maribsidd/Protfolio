@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Citizen Shield — PrahariAI</title>
+<link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="app-nav">
+    <div class="app-mark"><a href="/">PRAHARI<span style="color:var(--amber)">AI</span></a></div>
+    <div class="app-links">
+      <a href="/dashboard">Command Center</a>
+      <a href="/scam-detector">Scam Detector</a>
+      <a href="/voice-shield">Voice Shield</a>
+      <a href="/counterfeit-scanner">Note Scanner</a>
+      <a href="/complaint-assist">Complaint Assist</a>
+      <a href="/awareness">Scam Watch</a>
+      <a href="/citizen-shield" class="active">Citizen Shield</a>
+    </div>
+  </nav>
+
+  <main class="app-main">
+    <div class="page-head">
+      <span class="eyebrow">Instrument 05</span>
+      <h1>Citizen Fraud Shield</h1>
+      <p>Describe a suspicious call, message, or payment request in your own words. Get a plain-language verdict and what to do next.</p>
+    </div>
+
+    <div class="panel" style="max-width:760px; margin:0 auto;">
+      <div class="chat-window" id="chat-window">
+        <div class="chat-bubble bot">Hi, I'm Prahari. Tell me what happened — who called or messaged you, and what they asked for.</div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chat-input" placeholder="e.g. Someone called claiming to be from CBI, said my Aadhaar is linked to a crime..." />
+        <button class="btn-sm primary" id="chat-send">Send</button>
+      </div>
+      <p class="mono" style="color:var(--paper-dim); font-size:0.75rem; margin-top:14px;">
+        In an active emergency, call 1930 (National Cyber Fraud Helpline) or report at cybercrime.gov.in.
+      </p>
+    </div>
+  </main>
+</div>
+
+<script src="{{ url_for('static', filename='js/citizen_shield.js') }}"></script>
+</body>
+</html>

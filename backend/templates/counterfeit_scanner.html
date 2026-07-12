@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Note Scanner — PrahariAI</title>
+<link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+<body>
+<div class="app-shell">
+  <nav class="app-nav">
+    <div class="app-mark"><a href="/">PRAHARI<span style="color:var(--amber)">AI</span></a></div>
+    <div class="app-links">
+      <a href="/dashboard">Command Center</a>
+      <a href="/scam-detector">Scam Detector</a>
+      <a href="/voice-shield">Voice Shield</a>
+      <a href="/counterfeit-scanner" class="active">Note Scanner</a>
+      <a href="/complaint-assist">Complaint Assist</a>
+      <a href="/awareness">Scam Watch</a>
+      <a href="/citizen-shield">Citizen Shield</a>
+    </div>
+  </nav>
+
+  <main class="app-main">
+    <div class="page-head">
+      <span class="eyebrow">Instrument 02</span>
+      <h1>Counterfeit Note Scanner</h1>
+      <p>Upload or photograph a currency note. The engine checks it against known RBI security features — security thread, latent image, microprinting, and watermark clarity.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <h2 class="panel-title">Upload a note image</h2>
+        <p class="panel-sub">JPG or PNG, clear and well-lit for best accuracy.</p>
+        <div class="drop-zone" id="drop-zone">
+          <p class="mono" style="color:var(--paper-dim)">Click to choose a file, or drag one here</p>
+          <input type="file" id="file-input" accept="image/*" style="display:none" />
+          <img id="preview-img" style="display:none" />
+        </div>
+        <div class="btn-row">
+          <button class="btn-sm primary" id="scan-btn" disabled>Scan note</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2 class="panel-title">What the engine checks</h2>
+        <p class="panel-sub">Security features referenced in every scan.</p>
+        <ul class="flag-list" style="margin-top:0">
+          <li>Security thread continuity and colour-shift</li>
+          <li>Latent image visibility at an angle</li>
+          <li>Microprinting sharpness around the denomination</li>
+          <li>Mahatma Gandhi watermark clarity</li>
+          <li>See-through register alignment</li>
+          <li>Serial number font and spacing consistency</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="panel verdict-box" id="verdict-box">
+      <span class="eyebrow" id="verdict-label">Verdict</span>
+      <div class="verdict-score" id="verdict-score">—</div>
+      <p id="verdict-reasoning" style="color:var(--paper-dim); margin-top:12px;"></p>
+      <ul class="flag-list" id="flag-list"></ul>
+    </div>
+  </main>
+</div>
+
+<script src="{{ url_for('static', filename='js/counterfeit_scanner.js') }}"></script>
+</body>
+</html>
