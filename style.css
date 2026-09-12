@@ -113,13 +113,22 @@ html, body {
 #site { position: relative; z-index: 1; min-height: 100vh; }
 
 #mainNav {
-  position: sticky; top: 0;
-  display: flex; align-items: center; justify-content: space-between;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--neon-dim);
-  background: rgba(5, 8, 7, 0.85);
-  backdrop-filter: blur(4px);
+  background: rgba(5, 8, 7, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 10;
+  transition: border-color 0.25s ease;
+}
+
+#mainNav:hover {
+  border-bottom-color: var(--neon);
 }
 .logo { color: var(--neon); font-weight: bold; }
 .cursor { animation: blink 1s step-start infinite; }
