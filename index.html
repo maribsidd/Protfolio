@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Marib // root access</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="matrixCanvas"></canvas>
+<audio id="snapSound" src="snap-sound.mp3" preload="auto"></audio>
+
+<div id="boot">
+  <pre id="bootText"></pre>
+</div>
+
+<div id="snapScreen" class="hidden">
+  <canvas id="snapParticles"></canvas>
+  <div class="core">
+    <div class="core-ring r1"></div>
+    <div class="core-ring r2"></div>
+    <div class="core-ring r3"></div>
+    <div class="core-glow"></div>
+  </div>
+  <p class="snap-label">SYSTEM READY. AWAITING AUTHORIZATION.</p>
+  <button id="snapBtn">[ SNAP ]</button>
+</div>
+
+<div id="site" class="hidden">
+
+  <nav id="mainNav">
+    <span class="logo">root@marib<span class="cursor">_</span></span>
+    <div class="nav-links">
+      <button class="nav-btn active" data-target="home">home</button>
+      <button class="nav-btn" data-target="about">about</button>
+      <button class="nav-btn" data-target="projects">projects</button>
+      <button class="nav-btn" data-target="contact">contact</button>
+    </div>
+  </nav>
+
+  <main id="pageWrap">
+
+    <!-- ===================== HOME ===================== -->
+    <section id="home" class="page active">
+      <div class="home-grid">
+        <div class="home-copy">
+          <span class="badge">[ AI_RESEARCHER &amp; BUILDER ]</span>
+          <h1 class="glitch big" data-text="MOHD">MOHD</h1>
+          <h1 class="glitch big" data-text="MARIB.">MARIB.</h1>
+          <p class="tagline">From scrap motors to neural nets —<br>
+            <span class="accent">everything I touch runs.</span></p>
+          <div class="social-row">
+            <a class="icon-btn" href="https://github.com/maribsidd" target="_blank" rel="noopener" title="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 5.02 3.26 9.28 7.79 10.78.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.17.69-3.84-1.35-3.84-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.53-.29-5.19-1.27-5.19-5.63 0-1.24.44-2.26 1.17-3.05-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.16.91-.25 1.89-.38 2.86-.39.97.01 1.95.14 2.86.39 2.18-1.47 3.14-1.16 3.14-1.16.62 1.58.23 2.75.11 3.04.73.79 1.17 1.81 1.17 3.05 0 4.37-2.66 5.34-5.2 5.62.41.36.77 1.07.77 2.15 0 1.56-.01 2.81-.01 3.19 0 .3.2.66.79.55A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://linkedin.com/in/md-marib/" target="_blank" rel="noopener" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </a>
+            <a class="icon-btn" href="mailto:mohdmarib81@gmail.com" title="Email">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13zm2.2.2 7.3 6.1a.8.8 0 0 0 1 0l7.3-6.1H4.2zM20 7.1l-7.05 5.9a2.3 2.3 0 0 1-2.9 0L4 7.1v11.4c0 .28.22.5.5.5h15a.5.5 0 0 0 .5-.5V7.1z"/></svg>
+            </a>
+          </div>
+          <button class="nav-btn ghost" data-target="contact">get_in_touch()</button>
+        </div>
+
+        <div class="home-side">
+          <div class="quote-block">
+            <p>"A project only counts if it actually runs."</p>
+            <span class="quote-sub">— rule I still build by</span>
+          </div>
+          <div class="feed-box">
+            <p class="feed-title">// currently</p>
+            <p>&gt; running an independent gap year — no institution, just projects</p>
+            <p>&gt; 24+ hackathons logged, one solo top 12 of 40,000+</p>
+            <p>&gt; Country Director, India — Recycle My Battery (RMB)</p>
+            <p>&gt; building: Qyro, Lumeo, IndVestor AI, Swasthya</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="page">
+      <h2 class="glitch" data-text="ABOUT">ABOUT</h2>
+      <div class="term-box wide">
+        <p>&gt; I found my way into tech through building, not through a classroom.
+           Long before computer science was a subject I studied formally, it was
+           just the thing I did after school.</p>
+
+        <p>&gt; It started young — poking around ethical hacking basics around age
+           9-10, out of pure curiosity about how systems actually worked underneath.
+           Around the same time I was building RC cars out of scrap motors, well
+           before I understood what a circuit even was. At 13 I built a 2D game in
+           Unity, mostly by breaking things and figuring out why they broke.</p>
+
+        <p>&gt; Along the way I wrote two books that had nothing to do with code — a
+           poetry collection, and a long-form essay analyzing gaps in India's
+           education system. Different medium, same instinct: notice a problem,
+           sit with it, and produce something real about it.</p>
+
+        <p>&gt; Right now I'm on a self-directed gap year. No institutional
+           affiliation, no assigned curriculum — I set my own scope and ship
+           against it. That's meant competing in 24+ hackathons, including a solo
+           finish in the top 12 of 40,000+ entrants against university teams.</p>
+
+        <p>&gt; I also serve as Country Director, India for Recycle My Battery
+           (RMB), an international NGO — running school outreach and building
+           partnerships to get e-waste recycling programs into classrooms.</p>
+
+        <p>&gt; Across all of it, one rule hasn't changed:
+           <span class="accent">a project only counts if it actually runs.</span>
+           Not planned. Not pitched. Running, in front of real users.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="page">
+      <h2 class="glitch" data-text="PROJECTS">PROJECTS</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="tag testing">IN TESTING</span>
+          <h3>Qyro</h3>
+          <p>QR-code ordering platform for restaurants. Owners run live orders
+             and menus from a dashboard, customers order from their phone —
+             zero app installs, already used by real paying customers.</p>
+          <div class="tags-row"><span>Flask</span><span>SQLite</span><span>WebSockets</span></div>
+        </div>
+        <div class="card">
+          <span class="tag live">LIVE</span>
+          <h3>Lumeo</h3>
+          <p>AI tool built for content creators that turns long videos into
+             short clips and auto-writes captions, cutting hours of manual
+             editing down to minutes.</p>
+          <div class="tags-row"><span>AI/ML</span><span>Video</span></div>
+        </div>
+        <div class="card">
+          <span class="tag live">LIVE</span>
+          <h3>IndVestor AI</h3>
+          <p>An AI layer built for Indian retail investors — simplifies equity
+             research and surfaces market signals without the usual jargon
+             overload.</p>
+          <div class="tags-row"><span>AI/ML</span><span>FinTech</span></div>
+        </div>
+        <div class="card">
+          <span class="tag testing">PREVIEW</span>
+          <h3>Swasthya</h3>
+          <p>First-place hackathon-winning healthcare AI — a symptom checker
+             grounded only in professional-verified medical data, not the
+             open internet.</p>
+          <div class="tags-row"><span>AI/ML</span><span>Healthcare</span></div>
+        </div>
+        <div class="card">
+          <span class="tag testing">PREVIEW</span>
+          <h3>ArogyaAI</h3>
+          <p>An extension of the Swasthya line of thinking — applying the
+             same verified-data-only approach to broader healthcare use cases.</p>
+          <div class="tags-row"><span>AI/ML</span><span>Healthcare</span></div>
+        </div>
+        <div class="card">
+          <span class="tag testing">PREVIEW</span>
+          <h3>EmailTriage</h3>
+          <p>An automated email triage agent built on open AI-environment
+             tooling — sorts and prioritizes inbox load with no manual rules.</p>
+          <div class="tags-row"><span>AI/ML</span><span>Automation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="page">
+      <h2 class="glitch" data-text="CONTACT">CONTACT</h2>
+      <div class="term-box wide">
+        <p class="feed-title">// status</p>
+        <p>&gt; open to research conversations, collaborations, and hard problems.</p>
+        <p>&gt; currently building solo, response time usually under 48 hours.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:mohdmarib81@gmail.com">
+          <span class="contact-label">EMAIL</span>
+          <span class="contact-value">mohdmarib81@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://github.com/maribsidd" target="_blank" rel="noopener">
+          <span class="contact-label">GITHUB</span>
+          <span class="contact-value">maribsidd</span>
+        </a>
+        <a class="contact-card" href="https://linkedin.com/in/md-marib/" target="_blank" rel="noopener">
+          <span class="contact-label">LINKEDIN</span>
+          <span class="contact-value">md-marib</span>
+        </a>
+      </div>
+
+      <p class="footer-line">&gt; end of transmission_</p>
+    </section>
+
+  </main>
+
+  <div id="mascot">
+    <div class="speech-bubble" id="speechBubble">Yo. Welcome to my system.</div>
+    <img class="mascot-figure" src="mascot.png" alt="hooded mascot representing Marib" />
+  </div>
+
+</div>
+
+<canvas id="dustCanvas"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
