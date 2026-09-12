@@ -110,8 +110,25 @@ html, body {
 #snapBtn:hover { background: var(--neon); color: #000; }
 
 /* ---------- SITE SHELL ---------- */
-#site { position: relative; z-index: 1; min-height: 100vh; }
+#site {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
 
+#site::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(0, 255, 102, 0.025) 4px
+  );
+}
 #mainNav {
   position: sticky;
   top: 0;
